@@ -22,7 +22,7 @@
                 <div id="guardado">
                     <h3>Introduce una nueva tarea</h3>
                     <form action="">
-                        <input type="text" placeholder="Introduce nueva tarea">
+                        <input type="text" placeholder="Introduce nueva tarea" id="tarea">
                         <select name="" id="addtarea">
                             <option value="">Prioridad</option>
                             <option value="">Diaria</option>
@@ -31,14 +31,14 @@
                             <option value="">Urgente</option>
                         </select>
 
-                        <button>Guardar tarea</button>
+                        <button id="guardar">Guardar tarea</button>
                     </form>
 
                 </div>
                 <hr>
                 <div id="buscador">
                     <h3>Busca una tarea</h3>
-                    <input type="text" placeholder="Introduce tarea a buscar">
+                    <input type="text" placeholder="Introduce tarea a buscar" id="buscartarea">
                     <select name="" id="buscartarea">
                         <option value="">Prioridad</option>
                         <option value="">Diaria</option>
@@ -46,19 +46,18 @@
                         <option value="">Mensual</option>
                         <option value="">Urgente</option>
                     </select>
-                    <button>Buscar tarea</button>
+                    <button id="buscar">Buscar tarea</button>
                 </div>
             </div>
         </header>
         <main>
             <h2>Tareas pendientes</h2>
             <hr id="separador">
-            <section>
+            <section id="listatareas">
                 <article>
                     <h3>Sacar a Chula tres veces al día</h3>
                     <p>Diaria</p>
                     <button id="eliminar">Eliminar tarea</button>
-
                 </article>
                 <hr>
                 <article>
