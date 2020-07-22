@@ -1,0 +1,144 @@
+/* ***RESETS Y ESTILOS IMPORTADOS*** */
+
+/* reset basico */
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* hojas de estilo importadas */
+
+/* iconos fontawesome */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js");
+
+/* fuentes Google fonst handlee y ubuntu */
+@import url("https://fonts.googleapis.com/css2?family=Handlee&family=Ubuntu&display=swap");
+
+/* ---FIN RESETS Y ESTILOS IMPORTADOS--- */
+
+/* ***ESTILO GENERAL*** */
+
+:root {
+    --color-principal: blue;
+    --color-secundario: black;
+    --color-palta: tomato;
+    --color-pdiaria: yellowgreen;
+    --color-psemanal: lightblue;
+    --color-pmensual: silver;
+    --fuente-principal: 'Handlee', cursive;
+    --fuente-secundaria: 'Ubuntu', sans-serif;
+
+
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display:block;
+}
+
+/* ---FIN ESTILO GENERAL--- */
+
+/* ***INICIO HEADER*** */
+
+.container {
+    display: flex;
+}
+
+header {
+    max-width: 500px;
+    height: 100vh;
+    font-family: var(--fuente-secundaria);
+    border-right: 1px solid black;
+    background-color: var(--color-pmensual);
+}
+
+header div h2 {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+#guardado {
+    margin-bottom: 20px;
+}
+
+#guardado h3 {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+input {
+    font-family: var(--fuente-secundaria);
+    font-size: 15px;
+    width: 80%;
+    margin:10px 10%;
+    padding-left: 3px;
+}
+
+#addtarea {
+    font-family: var(--fuente-secundaria);
+    font-size: 15px;
+    width: 50%;
+    margin: 10px 10%;
+}
+
+#buscador h3 {
+    text-align: center;
+    margin: 10px 0px;
+}
+
+#buscartarea {
+    font-family: var(--fuente-secundaria);
+    font-size: 15px;
+    width: 50%;
+    margin: 10px 10%;
+
+}
+
+button {
+ width: 19%;
+
+}
+
+button:hover {
+   background-color:lightblue;
+}
+
+/* ---FIN HEADER--- */
+
+/* ***INICIO MAIN*** */
+
+main {
+    margin-left: 20px;
+}
+
+main h2 {
+    font-family: var(--fuente-secundaria);
+    font-size: 30px;
+    margin: 20px 0px;
+  
+}
+#separador {
+  
+    border: 2px solid black;
+}
+
+article {
+    width: 900px;
+    margin: 20px 0px;
+    padding: 5px;
+    font-family: var(--fuente-principal);
+    font-size: 20px;
+
+}
+
+
+main section article button {
+    float: right;
+}
+
+main section article button:hover {
+    background-color: lightblue;
+}

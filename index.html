@@ -5,21 +5,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Ubuntu&display=swap" rel="stylesheet">
     <title>Agenda TODO</title>
 
 </head>
 
 <body>
+    <div class="container">
+        <header>
+            <div>
+                <img src="https://madnessprint.com/wp-content/uploads/2019/11/a-agendaspersonalizadas1.jpg" alt="">
+            </div>
+            <div>
+                <h2>Gestión de tareas</h2>
+                <hr>
+                <div id="guardado">
+                    <h3>Introduce una nueva tarea</h3>
+                    <form action="">
+                        <input type="text" placeholder="Introduce nueva tarea">
+                        <select name="" id="addtarea">
+                            <option value="">Prioridad</option>
+                            <option value="">Diaria</option>
+                            <option value="">Semanal</option>
+                            <option value="">Mensual</option>
+                            <option value="">Urgente</option>
+                        </select>
 
-    <header></header>
-    <main>
-        <section>
-            <form action=""></form>
-            <div></div>
-        </section>
-    </main>
+                        <button>Guardar tarea</button>
+                    </form>
 
+                </div>
+                <hr>
+                <div id="buscador">
+                    <h3>Busca una tarea</h3>
+                    <input type="text" placeholder="Introduce tarea a buscar">
+                    <select name="" id="buscartarea">
+                        <option value="">Prioridad</option>
+                        <option value="">Diaria</option>
+                        <option value="">Semanal</option>
+                        <option value="">Mensual</option>
+                        <option value="">Urgente</option>
+                    </select>
+                    <button>Buscar tarea</button>
+                </div>
+            </div>
+        </header>
+        <main>
+            <h2>Tareas pendientes</h2>
+            <hr id="separador">
+            <section>
+                <article>
+                    <h3>Sacar a Chula tres veces al día</h3>
+                    <p>Diaria</p>
+                    <button id="eliminar">Eliminar tarea</button>
 
+                </article>
+                <hr>
+                <article>
+                    <h3>Estudiar JavaScript 2 horas diarias más los fines de semana</h3>
+                    <p>Urgente</p>
+                    <button>Eliminar tarea</button>
+
+                </article>
+                <hr>
+                <article>
+                    <h3>Salir con Maria a cenar a algún sitio del pueblo que nos apetezca</h3>
+                    <p>Semanal</p>
+                    <button>Eliminar tarea</button>
+
+                </article>
+                <hr>
+                <article>
+                    <h3>Jugar a Cities Skylines y grabar al menos 3 vídeos a la semana</h3>
+                    <p>Semanal</p>
+                    <button>Eliminar tarea</button>
+
+                </article>
+                <hr>
+                <article>
+                    <h3>Ir a la peluquería que ya tengo muchas greñas </h3>
+                    <p>Mensual</p>
+                    <button>Eliminar tarea</button>
+
+                </article>
+                <hr>
+            </section>
+        </main>
+
+    </div>
     <script src="funciones/funciones.js"></script>
     <script src="funciones/eventos.js"></script>
 </body>
