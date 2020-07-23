@@ -1,12 +1,10 @@
 
 
 let btnGuardar = document.querySelector('#guardar');
-
 let inputTarea = document.querySelector('#tarea');
-
 let seccionTareas = document.querySelector('.secciontareas');
 let priTarea = document.querySelector('#addtarea')
-
+let btnEliminar = document.querySelector('#eliminar');
 let contadorTarea = 0;
 
 
@@ -28,8 +26,6 @@ function capturarTarea(event) {
         tarea: tarea,
         prioridad: prioridad
     }
-    console.log(newTarea);
-
     guardarTarea(newTarea);
 
     pintarTarea(newTarea);
@@ -40,13 +36,16 @@ function capturarTarea(event) {
 
 
 function pintarTarea(pTarea) {
-
-
-    seccionTareas.innerHTML += `<article data-id=${pTarea.id}>
+    seccionTareas.innerHTML += `<article data-id="tarea_${pTarea.id}">
                             <h3>${pTarea.tarea}</h3>
                              <p>${pTarea.prioridad}</p >
                             <button id="eliminar">Eliminar tarea</button>
                             </article >
                             <hr>`
 }
+
+
+
+
+
 
