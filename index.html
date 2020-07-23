@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Ubuntu&display=swap" rel="stylesheet">
     <title>Agenda TODO</title>
+    <script src="funciones/modelo.js"></script>
 
 </head>
 
@@ -23,12 +24,12 @@
                     <h3>Introduce una nueva tarea</h3>
                     <form action="">
                         <input type="text" placeholder="Introduce nueva tarea" id="tarea">
-                        <select name="" id="addtarea">
+                        <select id="addtarea">
                             <option value="">Prioridad</option>
-                            <option value="">Diaria</option>
-                            <option value="">Semanal</option>
-                            <option value="">Mensual</option>
-                            <option value="">Urgente</option>
+                            <option value="Diaria">Diaria</option>
+                            <option value="Semanal">Semanal</option>
+                            <option value="Mensual">Mensual</option>
+                            <option value="Ugente">Urgente</option>
                         </select>
 
                         <button id="guardar">Guardar tarea</button>
@@ -53,41 +54,14 @@
         <main>
             <h2>Tareas pendientes</h2>
             <hr id="separador">
-            <section id="listatareas">
-                <article>
+            <section class="secciontareas">
+                <!--    <article>
                     <h3>Sacar a Chula tres veces al día</h3>
                     <p>Diaria</p>
                     <button id="eliminar">Eliminar tarea</button>
                 </article>
-                <hr>
-                <article>
-                    <h3>Estudiar JavaScript 2 horas diarias más los fines de semana</h3>
-                    <p>Urgente</p>
-                    <button>Eliminar tarea</button>
+                <hr> -->
 
-                </article>
-                <hr>
-                <article>
-                    <h3>Salir con Maria a cenar a algún sitio del pueblo que nos apetezca</h3>
-                    <p>Semanal</p>
-                    <button>Eliminar tarea</button>
-
-                </article>
-                <hr>
-                <article>
-                    <h3>Jugar a Cities Skylines y grabar al menos 3 vídeos a la semana</h3>
-                    <p>Semanal</p>
-                    <button>Eliminar tarea</button>
-
-                </article>
-                <hr>
-                <article>
-                    <h3>Ir a la peluquería que ya tengo muchas greñas </h3>
-                    <p>Mensual</p>
-                    <button>Eliminar tarea</button>
-
-                </article>
-                <hr>
             </section>
         </main>
 

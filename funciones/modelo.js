@@ -1,4 +1,4 @@
-// 1.formato de la tarea
+
 
 const listaTareas = new Array(
     {
