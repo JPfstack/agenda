@@ -5,7 +5,7 @@ let inputTarea = document.querySelector('#tarea');
 let seccionTareas = document.querySelector('.secciontareas');
 let priTarea = document.querySelector('#addtarea')
 let btnEliminar = document.querySelector('#eliminar');
-let contadorTarea = 2;
+let contadorTarea = 0;
 
 
 
@@ -56,30 +56,76 @@ function borrarTarea(pId) {
 
 let btnBuscarXPrioridad = document.querySelector('#buscar');
 let selectorPrioridad = document.querySelector('#selectorprioridad');
-
 selectorPrioridad.addEventListener('change', buscarXPrioridad);
 
 function buscarXPrioridad(event) {
     let seleccionPrioridad = event.target.value;
     let listaXPrioridad = filtrarXPrioridad(listaTareas, seleccionPrioridad);
     pintarTareasXPrioridad(listaXPrioridad);
-
-
-
 }
-function filtrarXPrioridad(pListaTareas, pPrioridad) {
-    let listaFiltradaXPrioridad = new Array();
 
-    listaFiltradaXPrioridad = pListaTareas.filter(tarea => tarea.prioridad == pPrioridad);
-
-    return listaFiltradaXPrioridad;
-}
 
 function pintarTareasXPrioridad(pListaXPrioridad) {
     seccionTareas.innerHTML = "";
-    seccionTareas.innerText = pListaXPrioridad.length;
-    pListaXPrioridad.forEach(tarea => {
-        pintarTarea(tarea)
-    });
+    let selectorPrioridad = event.target.value;
+    pListaXPrioridad.forEach(tarea => { pintarTarea(tarea) });
+    if (selectorPrioridad == "Prioridad") {
+        listaTareas.forEach(tarea => { pintarTarea(tarea) })
+    }
+}
 
-} 
+
+let inputBuscarTarea = document.getElementById('buscartarea');
+inputBuscarTarea.addEventListener('input', capturarXInput);
+
+
+function capturarXInput(event) {
+    let inputBuscado = event.target.value;
+
+    let resultadoBusqueda = buscarXInput(listaTareas, inputBuscado);
+    pintarTareasXInput(resultadoBusqueda);
+
+}
+
+const listaXInputBuscado = new Array();
+
+function buscarXInput(pListaTareas, pInputBuscado) {
+    let listaXInputBuscado = pListaTareas.filter(tarea => tarea.tarea.includes(pInputBuscado));
+    return listaXInputBuscado;
+
+}
+
+function pintarTareasXInput(pListaXInput) {
+    seccionTareas.innerHTML = "";
+    pListaXInput.forEach(tarea => { pintarUnaTarea(tarea) });
+}
+
+function pintarUnaTarea(pTarea) {
+    //crear los elementos
+    let article = document.createElement('article');
+    let h3 = document.createElement('h3');
+    let p = document.createElement('p');
+    let a = document.createElement('a');
+    a.className = "eliminar";
+
+
+    //creo los contenidos
+
+    let contentH3 = document.createTextNode(pTarea.tarea);
+    let contentp = document.createTextNode(pTarea.prioridad);
+
+    //tiro los contenidos dentro de los elementos.
+
+
+    h3.appendChild(contentH3);
+    p.appendChild(contentp);
+
+
+
+    article.appendChild(h3);
+    article.appendChild(p);
+    article.appendChild(a);
+
+    seccionTareas.appendChild(article);
+
+}

@@ -4,8 +4,13 @@ function guardarTarea(pTarea) {
     listaTareas.push(pTarea);
 }
 
-function borrar(pTareaBorrar) {
-    let id = parseInt(pId);
+function borrar(pId) {
     let posicionBorrar = listaTareas.findIndex(tarea => tarea.id == pId);
-    listaTareas.slice(posicionBorrar, 1);
+    listaTareas.splice(posicionBorrar, 1);
+}
+
+function filtrarXPrioridad(pListaTareas, pPrioridad) {
+    let listaFiltradaXPrioridad = new Array();
+    listaFiltradaXPrioridad = pListaTareas.filter(tarea => tarea.prioridad == pPrioridad);
+    return listaFiltradaXPrioridad;
 }
