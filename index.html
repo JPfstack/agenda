@@ -55,12 +55,11 @@
             <h2>Tareas pendientes</h2>
             <hr id="separador">
             <section class="secciontareas">
-                <!--    <article>
-                    <h3>Sacar a Chula tres veces al día</h3>
-                    <p>Diaria</p>
-                    <button id="eliminar">Eliminar tarea</button>
+                <article data-id=${pTarea.id} id="tarea_${pTarea.id}">
+                    <h3>${pTarea.tarea}</h3>
+                    <p>${pTarea.prioridad}</p>
+                    <a onclick="borrarTarea('tarea_${pTarea.id}')" class="eliminar">Eliminar</a>
                 </article>
-                <hr> -->
 
             </section>
         </main>

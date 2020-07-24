@@ -36,16 +36,22 @@ function capturarTarea(event) {
 
 
 function pintarTarea(pTarea) {
-    seccionTareas.innerHTML += `<article data-id="tarea_${pTarea.id}">
+    seccionTareas.innerHTML += `<article data-id=${pTarea.id} id="tarea_${pTarea.id}">
                             <h3>${pTarea.tarea}</h3>
                              <p>${pTarea.prioridad}</p >
-                            <button id="eliminar">Eliminar tarea</button>
-                            </article >
-                            <hr>`
+                            <a onclick="borrarTarea('tarea_${pTarea.id}')" class="eliminar" >Eliminar</a>
+                            </article >`
 }
 
 
 
 
+function borrarTarea(pId) {
+    let tareaBorrar = document.getElementById(pId);
+    seccionTareas.removeChild(tareaBorrar);
+    borrar(pId);
+
+
+}
 
 
