@@ -29,7 +29,7 @@
                             <option value="Diaria">Diaria</option>
                             <option value="Semanal">Semanal</option>
                             <option value="Mensual">Mensual</option>
-                            <option value="Ugente">Urgente</option>
+                            <option value="Urgente">Urgente</option>
                         </select>
 
                         <button id="guardar">Guardar tarea</button>
@@ -40,12 +40,12 @@
                 <div id="buscador">
                     <h3>Busca una tarea</h3>
                     <input type="text" placeholder="Introduce tarea a buscar" id="buscartarea">
-                    <select name="" id="buscartarea">
+                    <select name="" id="selectorprioridad">
                         <option value="">Prioridad</option>
-                        <option value="">Diaria</option>
-                        <option value="">Semanal</option>
-                        <option value="">Mensual</option>
-                        <option value="">Urgente</option>
+                        <option value="Diaria">Diaria</option>
+                        <option value="Semanal">Semanal</option>
+                        <option value="Mensual">Mensual</option>
+                        <option value="Urgente">Urgente</option>
                     </select>
                     <button id="buscar">Buscar tarea</button>
                 </div>
@@ -55,11 +55,11 @@
             <h2>Tareas pendientes</h2>
             <hr id="separador">
             <section class="secciontareas">
-                <article data-id=${pTarea.id} id="tarea_${pTarea.id}">
+                <!-- <article data-id=${pTarea.id} id="tarea_${pTarea.id}">
                     <h3>${pTarea.tarea}</h3>
                     <p>${pTarea.prioridad}</p>
                     <a onclick="borrarTarea('tarea_${pTarea.id}')" class="eliminar">Eliminar</a>
-                </article>
+                </article> -->
 
             </section>
         </main>

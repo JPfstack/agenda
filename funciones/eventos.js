@@ -5,7 +5,7 @@ let inputTarea = document.querySelector('#tarea');
 let seccionTareas = document.querySelector('.secciontareas');
 let priTarea = document.querySelector('#addtarea')
 let btnEliminar = document.querySelector('#eliminar');
-let contadorTarea = 0;
+let contadorTarea = 2;
 
 
 
@@ -54,4 +54,32 @@ function borrarTarea(pId) {
 
 }
 
+let btnBuscarXPrioridad = document.querySelector('#buscar');
+let selectorPrioridad = document.querySelector('#selectorprioridad');
 
+selectorPrioridad.addEventListener('change', buscarXPrioridad);
+
+function buscarXPrioridad(event) {
+    let seleccionPrioridad = event.target.value;
+    let listaXPrioridad = filtrarXPrioridad(listaTareas, seleccionPrioridad);
+    pintarTareasXPrioridad(listaXPrioridad);
+
+
+
+}
+function filtrarXPrioridad(pListaTareas, pPrioridad) {
+    let listaFiltradaXPrioridad = new Array();
+
+    listaFiltradaXPrioridad = pListaTareas.filter(tarea => tarea.prioridad == pPrioridad);
+
+    return listaFiltradaXPrioridad;
+}
+
+function pintarTareasXPrioridad(pListaXPrioridad) {
+    seccionTareas.innerHTML = "";
+    seccionTareas.innerText = pListaXPrioridad.length;
+    pListaXPrioridad.forEach(tarea => {
+        pintarTarea(tarea)
+    });
+
+} 
