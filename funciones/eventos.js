@@ -31,6 +31,9 @@ function capturarTarea(event) {
     pintarTarea(newTarea);
     inputTarea.value = "";
     contadorTarea++;
+   
+ 
+ 
 
 }
 
@@ -38,7 +41,7 @@ function capturarTarea(event) {
 function pintarTarea(pTarea) {
     seccionTareas.innerHTML += `<article  id="${pTarea.id}">
                             <h3>${pTarea.tarea}</h3>
-                             <p>${pTarea.prioridad}</p >
+                             <p class=${pTarea.prioridad}>${pTarea.prioridad}</p >
                             <a onclick="borrarTarea('${pTarea.id}')" class="eliminar" >Eliminar</a>
                             </article >`
 }
@@ -52,7 +55,6 @@ function borrarTarea(pId) {
     let id = parseInt(pId);
     posicionBorrar = listaTareas.findIndex(tarea => tarea.id == pId);
     listaTareas.splice(posicionBorrar, 1);
-    console.log(posicionBorrar);
 
 }
 
@@ -100,6 +102,13 @@ function pintarTareasXInput(pListaXInput) {
     seccionTareas.innerHTML = "";
     pListaXInput.forEach(tarea => { pintarTarea(tarea) });
 }
+
+
+   
+
+    
+
+
 
 /* function pintarUnaTarea(pTarea) {
     seccionTareas.innerHTML += `<article data-id=${pTarea.id} id="tarea_${pTarea.id}">

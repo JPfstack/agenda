@@ -21,16 +21,8 @@
 /* ***ESTILO GENERAL*** */
 
 :root {
-    --color-principal: blue;
-    --color-secundario: black;
-    --color-palta: tomato;
-    --color-pdiaria: yellowgreen;
-    --color-psemanal: lightblue;
-    --color-pmensual: silver;
     --fuente-principal: 'Handlee', cursive;
     --fuente-secundaria: 'Ubuntu', sans-serif;
-
-
 }
 
 img {
@@ -164,5 +156,25 @@ main section article a:hover {
     background-color: tomato;
     box-shadow: 2px 2px 10px tomato;
 
+
+}
+
+.Diaria {
+
+    background: linear-gradient(to right,yellowgreen, white);
+}
+
+.Semanal {
+    background: linear-gradient(to right, lightblue, white);
+
+}
+
+.Mensual {
+    background: linear-gradient(to right, gold, white);
+
+}
+
+.Urgente {
+    background: linear-gradient(to right,red, white);
 
 }
