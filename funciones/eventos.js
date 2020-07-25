@@ -36,10 +36,10 @@ function capturarTarea(event) {
 
 
 function pintarTarea(pTarea) {
-    seccionTareas.innerHTML += `<article data-id=${pTarea.id} id="tarea_${pTarea.id}">
+    seccionTareas.innerHTML += `<article  id="${pTarea.id}">
                             <h3>${pTarea.tarea}</h3>
                              <p>${pTarea.prioridad}</p >
-                            <a onclick="borrarTarea('tarea_${pTarea.id}')" class="eliminar" >Eliminar</a>
+                            <a onclick="borrarTarea('${pTarea.id}')" class="eliminar" >Eliminar</a>
                             </article >`
 }
 
@@ -49,8 +49,10 @@ function pintarTarea(pTarea) {
 function borrarTarea(pId) {
     let tareaBorrar = document.getElementById(pId);
     seccionTareas.removeChild(tareaBorrar);
-    borrar(pId);
-
+    let id = parseInt(pId);
+    posicionBorrar = listaTareas.findIndex(tarea => tarea.id == pId);
+    listaTareas.splice(posicionBorrar, 1);
+    console.log(posicionBorrar);
 
 }
 
@@ -81,7 +83,6 @@ inputBuscarTarea.addEventListener('input', capturarXInput);
 
 function capturarXInput(event) {
     let inputBuscado = event.target.value;
-
     let resultadoBusqueda = buscarXInput(listaTareas, inputBuscado);
     pintarTareasXInput(resultadoBusqueda);
 
@@ -97,35 +98,42 @@ function buscarXInput(pListaTareas, pInputBuscado) {
 
 function pintarTareasXInput(pListaXInput) {
     seccionTareas.innerHTML = "";
-    pListaXInput.forEach(tarea => { pintarUnaTarea(tarea) });
+    pListaXInput.forEach(tarea => { pintarTarea(tarea) });
 }
 
-function pintarUnaTarea(pTarea) {
-    //crear los elementos
-    let article = document.createElement('article');
-    let h3 = document.createElement('h3');
-    let p = document.createElement('p');
-    let a = document.createElement('a');
-    a.className = "eliminar";
+/* function pintarUnaTarea(pTarea) {
+    seccionTareas.innerHTML += `<article data-id=${pTarea.id} id="tarea_${pTarea.id}">
+                                <h3>${pTarea.tarea}</h3>
+                                <p>${pTarea.prioridad}</p >
+                                <a onclick="borrarTarea('tarea_${pTarea.id}')" class="eliminar" >Eliminar</a>
+                                 </article >`
+ */
+
+    /*    //crear los elementos
+       let article = document.createElement('article');
+       let h3 = document.createElement('h3');
+       let p = document.createElement('p');
+       let a = document.createElement('a');
+       a.className = "eliminar";
+   
+   
+       //creo los contenidos
+   
+       let contentH3 = document.createTextNode(pTarea.tarea);
+       let contentp = document.createTextNode(pTarea.prioridad);
+   
+       //tiro los contenidos dentro de los elementos.
+   
+   
+       h3.appendChild(contentH3);
+       p.appendChild(contentp);
+   
+   
+   
+       article.appendChild(h3);
+       article.appendChild(p);
+       article.appendChild(a);
+   
+       seccionTareas.appendChild(article); */
 
 
-    //creo los contenidos
-
-    let contentH3 = document.createTextNode(pTarea.tarea);
-    let contentp = document.createTextNode(pTarea.prioridad);
-
-    //tiro los contenidos dentro de los elementos.
-
-
-    h3.appendChild(contentH3);
-    p.appendChild(contentp);
-
-
-
-    article.appendChild(h3);
-    article.appendChild(p);
-    article.appendChild(a);
-
-    seccionTareas.appendChild(article);
-
-}
