@@ -15,16 +15,16 @@
     <div class="container">
         <header>
             <div>
-                <img src="https://madnessprint.com/wp-content/uploads/2019/11/a-agendaspersonalizadas1.jpg" alt="">
+                <img src="img/" id="imagen">
             </div>
             <div>
                 <h2>Gestión de tareas</h2>
                 <hr>
                 <div id="guardado">
-                    <h3>Introduce una nueva tarea</h3>
+                    <h4>Introduce una nueva tarea</h4>
                     <form action="">
-                        <input type="text" placeholder="Introduce nueva tarea" id="tarea">
-                        <select id="addtarea">
+                        <input type="text" placeholder="Introduce nueva tarea" id="tarea" required="">
+                        <select id="addtarea" required>
                             <option value="">Prioridad</option>
                             <option value="Diaria">Diaria</option>
                             <option value="Semanal">Semanal</option>
@@ -32,14 +32,15 @@
                             <option value="Urgente">Urgente</option>
                         </select>
 
-                        <button id="guardar">Guardar tarea</button>
+                        <button type="submit" id="guardar">Guardar tarea</button>
                     </form>
 
                 </div>
                 <hr>
                 <div id="buscador">
-                    <h3>Busca una tarea</h3>
+                    <h4>Busca una tarea</h4>
                     <input type="text" placeholder="Introduce tarea a buscar" id="buscartarea">
+                    <h4>O filtra por prioridad</h4>
                     <select name="" id="selectorprioridad">
                         <option value="Prioridad">Prioridad</option>
                         <option value="Diaria">Diaria</option>
@@ -47,7 +48,6 @@
                         <option value="Mensual">Mensual</option>
                         <option value="Urgente">Urgente</option>
                     </select>
-                    <button id="buscar">Buscar tarea</button>
                 </div>
             </div>
         </header>

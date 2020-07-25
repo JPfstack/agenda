@@ -28,7 +28,7 @@
 img {
     width: 100%;
     height: auto;
-    display:block;
+    display: block;
 }
 
 /* ---FIN ESTILO GENERAL--- */
@@ -56,7 +56,7 @@ header div h2 {
     margin-bottom: 20px;
 }
 
-#guardado h3 {
+#guardado h4 {
     text-align: center;
     margin: 10px 0px;
 }
@@ -76,7 +76,7 @@ input {
     margin: 10px 10%;
 }
 
-#buscador h3 {
+#buscador h4 {
     text-align: center;
     margin: 10px 0px;
 }
@@ -84,7 +84,7 @@ input {
 #selectorprioridad {
     font-family: var(--fuente-secundaria);
     font-size: 15px;
-    width: 50%;
+    width: 80%;
     margin: 10px 10%;
 
 }
@@ -95,7 +95,7 @@ button {
 }
 
 button:hover {
-   background-color:lightblue;
+   background-color: silver;
 }
 
 /* ---FIN HEADER--- */
@@ -103,78 +103,82 @@ button:hover {
 /* ***INICIO MAIN*** */
 
 main {
-    margin-left: 20px;
+  
+    background: linear-gradient(to right,silver, white); 
+    width: 70vw;
+    padding-left: 20px;
 }
 
 main h2 {
     font-family: var(--fuente-secundaria);
     font-size: 30px;
     margin: 20px 0px;
+    width: 100%;
     
   
 }
 #separador {
-  
+
     border: 2px solid black;
 }
 
 article {
-    width: 900px;
+    width: 850px;
     margin: 20px 0px;
     padding: 5px;
     font-family: var(--fuente-principal);
     font-size: 20px;
-    border-bottom: 1px solid black;
-
+    background: linear-gradient(to right,silver, white); 
 }
 
-
-main section article button {
-    float: right;
-}
-
-main section article button:hover {
-    background-color: lightblue;
-    box-shadow: 2px 2px 10px lightblue;
+article:hover {
+    transition: 0.5s;
+    box-shadow: 2px 2px 20px silver;
+    transform:scale(1.01);
+    border-radius:20px;
 }
 
 main section article a {
-    width: 15%;
-   display: block;
+    width: 12%;
+    display: block;
    text-align: center;
    border: 1px solid black;
    cursor:pointer;
    margin: 0 0 0 85%;
-   border-radius: 20px;
+  border-radius: 20px;
    background-color: silver;
    font-weight: bold;
-
-   
 }
 
 main section article a:hover {
     background-color: tomato;
     box-shadow: 2px 2px 10px tomato;
-
-
+    transition: 0.3s;
+    
 }
 
 .Diaria {
-
     background: linear-gradient(to right,yellowgreen, white);
+    border-radius: 5px;
+    padding-left: 5px;
 }
 
 .Semanal {
-    background: linear-gradient(to right, lightblue, white);
-
+    background: linear-gradient(to right,lemonchiffon, white);
+    border-radius: 5px;
+    padding-left: 5px;
 }
 
 .Mensual {
-    background: linear-gradient(to right, gold, white);
-
+    background: linear-gradient(to right, goldenrod, white);
+    border-radius: 5px;
+    padding-left: 5px;
 }
 
 .Urgente {
-    background: linear-gradient(to right,red, white);
-
+    background: linear-gradient(to right, tomato, white);
+    border-radius: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
 }
