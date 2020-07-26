@@ -109,11 +109,5 @@ function pintarTareasXInput(pListaXInput) {
     pListaXInput.forEach(tarea => { pintarTarea(tarea) });
 }
 
-let img = document.querySelector('#imagen');
 
-function cambiarImg() {
-    let arrImg = new Array['img_1.jpg', 'img_2.jpg', 'img_3.jpg'];
-    img.src = arrImg[0];
 
-}
-cambiarImg();
