@@ -44,7 +44,7 @@ function pintarTarea(pTarea) {
     seccionTareas.innerHTML += `<article  id="${pTarea.id}">
                             <h3>${pTarea.tarea}</h3>
                              <p class=${pTarea.prioridad}>${pTarea.prioridad}</p >
-                            <a onclick="borrarTarea('${pTarea.id}')" class="eliminar" >Eliminar</a>
+                             <i onclick="borrarTarea('${pTarea.id}')" class="fa fa-trash fa-lg" aria-hidden="true"></i>
                             </article >`
 }
 
